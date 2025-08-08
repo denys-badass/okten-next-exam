@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Provider from "@/app/provider";
+import {ColorModeButton} from "@/components/ui/color-mode";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,9 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        {children}
+        <Provider>
+            <ColorModeButton/>
+            {children}
+        </Provider>
       </body>
     </html>
   );
