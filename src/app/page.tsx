@@ -17,7 +17,7 @@ export default function Home() {
                             </Link>
                         </Button>
                         <Button colorPalette='teal' variant='solid' size='lg' p='4' asChild>
-                            <Link href='/movie'>
+                            <Link href='/movies'>
                                 Continue as Guest
                             </Link>
                         </Button>

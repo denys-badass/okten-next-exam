@@ -18,8 +18,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Provider>
-            <ColorModeButton/>
-            {children}
+            <main>
+                <ColorModeButton/>
+                {children}
+            </main>
         </Provider>
       </body>
     </html>

@@ -2,7 +2,7 @@
 
 import { ChakraProvider} from "@chakra-ui/react"
 import { ThemeProvider } from "next-themes"
-import {system} from "@/theme";
+import {system} from "@/theme/theme";
 import {ReactNode} from "react";
 
 export default function Provider(props: { children: ReactNode }) {
