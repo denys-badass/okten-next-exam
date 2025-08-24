@@ -1,9 +1,9 @@
 import {IUser} from "@/models/IUser";
-import {ILoginData} from "@/models/ILoginData";
+import {ILoginFormData} from "@/models/ILoginFormData";
 
 const baseUrl = 'https://dummyjson.com/user/login';
 
-const userLogin = async (user: ILoginData): Promise<IUser> => {
+const userLogin = async (user: ILoginFormData): Promise<IUser> => {
     return await fetch(baseUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
