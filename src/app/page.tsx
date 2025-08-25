@@ -2,6 +2,7 @@ import {AbsoluteCenter, Box, Button, Flex, Heading, VStack} from "@chakra-ui/rea
 import styles from "./page.module.css";
 import Link from "next/link";
 import {Logo} from "@/components/logo/Logo";
+import {GuestButton} from "@/components/guest-button/GuestButton";
 
 export default function Home() {
     return (
@@ -16,11 +17,7 @@ export default function Home() {
                                 Log In
                             </Link>
                         </Button>
-                        <Button colorPalette='teal' variant='solid' size='lg' p='4' asChild>
-                            <Link href='/movies'>
-                                Continue as Guest
-                            </Link>
-                        </Button>
+                        <GuestButton/>
                     </Flex>
                 </VStack>
             </AbsoluteCenter>
