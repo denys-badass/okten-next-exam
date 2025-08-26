@@ -1,14 +1,15 @@
 'use client'
 
-import {guestLoginUtil} from "@/utils/login.utils";
 import {Button} from "@chakra-ui/react";
 import {useRouter} from "next/navigation";
+import {useLoginStore} from "@/ store/useLoginStore";
 
 export const GuestButton = () => {
+    const setGuestLogin = useLoginStore(state => state.setGuestLogin);
     const router = useRouter();
 
     const guestLoginHandler = () => {
-        guestLoginUtil();
+        setGuestLogin();
         router.push("/movies");
     }
 

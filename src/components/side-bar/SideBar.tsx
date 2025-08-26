@@ -4,6 +4,7 @@ import { Flex, Input, InputGroup} from "@chakra-ui/react";
 import Link from "next/link";
 import {LuSearch} from "react-icons/lu";
 import {GenresMenu} from "@/components/genres-menu/GenresMenu";
+import {LoginInfo} from "@/components/login-info/LoginInfo";
 
 const SideBar = () => {
     return (
@@ -15,6 +16,7 @@ const SideBar = () => {
                 </InputGroup>
                 <Link href='/movies'>Movies</Link>
                 <GenresMenu/>
+                <LoginInfo/>
             </Flex>
         </nav>
     );
