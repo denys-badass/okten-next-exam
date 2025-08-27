@@ -7,4 +7,10 @@ const nextConfig: NextConfig = {
     },
 };
 
+module.exports = {
+    images: {
+        remotePatterns: [new URL(`${process.env.MOVIE_IMAGE_URL}/**`)]
+    }
+}
+
 export default nextConfig;

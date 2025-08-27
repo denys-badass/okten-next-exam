@@ -1,15 +1,15 @@
 import {FC} from "react";
-import {IGenre} from "@/models/IGenre";
 import Link from "next/link";
+import {movieServices} from "@/services/movie.services";
 
 type Props = {
-    genre: IGenre;
+    genreId: number;
 }
 
-export const GenreLink: FC<Props> = ({genre}) => {
-    const {id, name} = genre;
+export const GenreLink: FC<Props> = async ({genreId}) => {
+    const genreName = await movieServices.getGenreName(genreId);
 
     return (
-        <Link href={`/movies?with_genres=${id}`}>{name}</Link>
+        <Link href={`/movies?with_genres=${genreId}`}>{genreName}</Link>
     );
 };

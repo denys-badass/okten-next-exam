@@ -15,7 +15,7 @@ export const GenresMenu = async () => {
                     </Accordion.ItemTrigger>
                     <Accordion.ItemContent>
                         {genres.map(genre => (
-                            <Accordion.ItemBody p='1' key={genre.id}><GenreLink genre={genre}/></Accordion.ItemBody>
+                            <Accordion.ItemBody p='1' key={genre.id}><GenreLink genreId={genre.id}/></Accordion.ItemBody>
                         ))}
                     </Accordion.ItemContent>
                 </Accordion.Item>
