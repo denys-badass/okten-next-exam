@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import {ReactNode} from "react";
+import {Providers} from "@/Providers";
+import {ThemeSwitcher} from "@/components/theme-switcher/ThemeSwitcher";
+import {roboto} from "@/fonts";
 
 export const metadata: Metadata = {
   title: "MovieHub",
@@ -14,8 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
+      <body className={`${roboto.className} antialiased`}>
+      <Providers>
+          <ThemeSwitcher/>
+          {children}
+      </Providers>
       </body>
     </html>
   );
