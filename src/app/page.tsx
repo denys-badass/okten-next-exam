@@ -1,6 +1,7 @@
 import styles from './page.module.css';
 import Link from "next/link";
 import Image from "next/image";
+import {Button} from "@heroui/button";
 
 export default function Welcome() {
     return (
@@ -11,17 +12,14 @@ export default function Welcome() {
                 </h1>
                 <Image src='/main-logo.svg' alt='MovieHub logo' width={500} height={200}/>
                 <div className={styles.buttonContainer}>
-                    <Link
-                        href="/login"
-                        className={`${styles.button} ${styles.loginButton}`}
-                    >
-                        Log In
+                    <Link href="/login">
+                        <Button className={`${styles.button} ${styles.loginButton}`}>
+                            Log In
+                        </Button>
                     </Link>
-                    <button
-                        className={`${styles.button} ${styles.guestButton}`}
-                    >
-                        Continue as Guest
-                    </button>
+                    <Link href='/movies'>
+                        <Button className={`${styles.button} ${styles.guestButton}`}>Continue as a Guest</Button>
+                    </Link>
                 </div>
             </div>
         </div>
