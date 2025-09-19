@@ -25,6 +25,10 @@ main {
     min-height: 90vh;
 }
 
+button {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
     :root {
         font-size: 16px;
