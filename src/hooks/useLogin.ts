@@ -1,5 +1,5 @@
 import {useLoginStore} from "@/store/useLoginStore";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {userService} from "@/services/user.service";
 import {useRouter} from "next/navigation";
 import {addToast} from "@heroui/toast";
@@ -11,7 +11,7 @@ export const useLogin = () => {
 
     useEffect(() => {
         setLogout();
-    }, []);
+    }, [setLogout]);
 
     const loginHandler = async (data: {username: string, password: string}) => {
         const {username, password} = data;
